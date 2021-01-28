@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.min.css">
+    <style>
+        /* 缩率图的样式 */
+        .magnifier{
+            margin: 20px auto;
+            width: 600px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .magnifier .abbre{
+            position: relative;
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+        }
+        .magnifier .abbre img{
+            height: 100%;
+            width: 100%;
+        }
+        .magnifier .abbre .mark{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 80px;
+            height: 80px;
+            background: rgba(255,0,0,.4);
+            cursor: move;
+        }
+        /* 详情图的样式 */
+        .magnifier .detail{
+            display: none;
+            position: relative;
+            box-sizing: border-box;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+        .magnifier .detail img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <section class="magnifier">
+        <!-- 缩略图 -->
+        <div class="abbre">
+            <img src="./1.jpg" >
+            <!-- MARK 遮罩层 -->
+            <div class="mark"></div>
+        </div>
+        <!--详情图--->
+        <div class="detail">
+            <img src="./2.jpeg" alt="">
+        </div>
+    </section>
+    <script src="./jquery.js"></script>
+    <script src="./magnifier.js"></script>
+</body>
+</html>
